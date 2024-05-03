@@ -9,5 +9,10 @@ namespace Task2
     public abstract class Transport
     {
         public string Car_number {  get; set; }
+        public virtual float TravelPrice() 
+        { 
+            return TravelPrice();
+        }
+
     }
 }
