@@ -8,7 +8,7 @@ namespace Task2
 {
     public class Delivery: Transport
     {
-        public float LoadUnloadPrice {  get; set; }
+        public float LoadUnloadPrice { get; set; } 
         public float DeliveryPrice { get; set; }
         public override float CalculateTravelPrice() { return DeliveryPrice + LoadUnloadPrice;}
     }

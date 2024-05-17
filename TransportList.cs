@@ -13,8 +13,9 @@ namespace Task2
         { 
             foreach (Transport transport in this)
             {
-                    transport.TravelPrice = transport.CalculateTravelPrice();
-                    Console.WriteLine($"Вид поездки: {transport.GetType().Name}; номер автомобиля: {transport.Car_number}; стоимость поездки: {transport.TravelPrice};");
+                if (transport.Car_number == null) { throw new ArgumentNullException(nameof(transport.Car_number)); };
+                transport.TravelPrice = transport.CalculateTravelPrice();
+                Console.WriteLine($"Вид поездки: {transport.GetType().Name}; номер автомобиля: {transport.Car_number}; стоимость поездки: {transport.TravelPrice};");
             }
         }
         public void CalculateSumTravelPrice()

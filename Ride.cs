@@ -8,8 +8,8 @@ namespace Task2
 {
     public class Ride: Transport
     {
-        public float HourDrive {  get; set; }
-        public float NumberOfHours { get; set; }
+        public int HourDrive {  get; set; }
+        public int NumberOfHours { get; set; }
         public override float CalculateTravelPrice() { return  HourDrive *  NumberOfHours; }
     }
 }
