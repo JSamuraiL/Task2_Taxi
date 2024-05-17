@@ -10,6 +10,6 @@ namespace Task2
     {
         public float HourDrive {  get; set; }
         public float NumberOfHours { get; set; }
-        public override float TravelPrice() { return HourDrive * NumberOfHours; }
+        public override float CalculateTravelPrice() { return  HourDrive *  NumberOfHours; }
     }
 }

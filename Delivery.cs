@@ -10,6 +10,6 @@ namespace Task2
     {
         public float LoadUnloadPrice {  get; set; }
         public float DeliveryPrice { get; set; }
-        public override float TravelPrice() { return DeliveryPrice + LoadUnloadPrice;}
+        public override float CalculateTravelPrice() { return DeliveryPrice + LoadUnloadPrice;}
     }
 }
