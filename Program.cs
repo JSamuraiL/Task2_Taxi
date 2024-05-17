@@ -12,3 +12,4 @@ var TransportList  = new TransportList
     new Ride{Car_number = "g1j7d", HourDrive = 10, NumberOfHours = 3}
 };
 TransportList.Travel();
+TransportList.CalculateSumTravelPrice();

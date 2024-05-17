@@ -8,16 +8,22 @@ namespace Task2
 {
     public class TransportList: List<Transport>
     {
+        public float SumTravelPrice = 0;
         public void Travel() 
         { 
             foreach (Transport transport in this)
             {
-                if (transport != null)
-                {
                     transport.TravelPrice = transport.CalculateTravelPrice();
-                    Console.WriteLine($"{transport.GetType().Name} {transport.Car_number} {transport.TravelPrice}");
-                }
+                    Console.WriteLine($"Вид поездки: {transport.GetType().Name}; номер автомобиля: {transport.Car_number}; стоимость поездки: {transport.TravelPrice};");
             }
+        }
+        public void CalculateSumTravelPrice()
+        {
+            foreach (Transport transport in this)
+            {
+                SumTravelPrice += transport.TravelPrice;
+            }
+            Console.WriteLine($"Суммарная стоимость поездок: {SumTravelPrice}");
         }
     }
 }

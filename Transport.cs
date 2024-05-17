@@ -10,6 +10,7 @@ namespace Task2
     {
         public string Car_number {  get; set; }
         public float TravelPrice { get; set; }
+
         public virtual float CalculateTravelPrice() 
         { 
             return CalculateTravelPrice();
