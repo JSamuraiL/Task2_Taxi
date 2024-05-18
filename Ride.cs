@@ -10,6 +10,11 @@ namespace Task2
     {
         public int HourDrive {  get; set; }
         public int NumberOfHours { get; set; }
-        public override float CalculateTravelPrice() { return  HourDrive *  NumberOfHours; }
+        public override float CalculateTravelPrice() 
+        {
+            if (HourDrive <= 0) { throw new ArgumentOutOfRangeException(nameof(HourDrive)); }
+            else if (NumberOfHours <= 0) { throw new ArgumentOutOfRangeException(nameof(NumberOfHours)); }
+            else return  HourDrive *  NumberOfHours; 
+        }
     }
 }

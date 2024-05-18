@@ -10,6 +10,11 @@ namespace Task2
     {
         public float LoadUnloadPrice { get; set; } 
         public float DeliveryPrice { get; set; }
-        public override float CalculateTravelPrice() { return DeliveryPrice + LoadUnloadPrice;}
+        public override float CalculateTravelPrice() 
+        { 
+            if (LoadUnloadPrice <= 0) { throw new ArgumentOutOfRangeException(nameof(LoadUnloadPrice)); }
+            else if (DeliveryPrice <= 0) { throw new ArgumentOutOfRangeException(nameof (DeliveryPrice)); }
+            else return DeliveryPrice + LoadUnloadPrice;
+        }
     }
 }
