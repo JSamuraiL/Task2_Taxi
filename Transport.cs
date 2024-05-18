@@ -13,7 +13,7 @@ namespace Task2
 
         public virtual float CalculateTravelPrice() 
         { 
-            return CalculateTravelPrice();  //это заглушка, в дальнейшем метод будет перезаписываться
+            return 0;  //это заглушка, в дальнейшем метод будет перезаписываться
         }
 
     }
