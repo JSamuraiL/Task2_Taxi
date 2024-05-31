@@ -11,10 +11,6 @@ namespace Task2
         public string Car_number {  get; set; }
         public float TravelPrice { get; set; }
 
-        public virtual float CalculateTravelPrice() 
-        { 
-            return 0;  //это заглушка, в дальнейшем метод будет перезаписываться
-        }
-
+        public abstract float CalculateTravelPrice();
     }
 }

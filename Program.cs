@@ -1,8 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Task2;
 
-Console.WriteLine("Hello, World!");
-
 var TransportList  = new TransportList
 {
     new Delivery {Car_number = "l13k4",LoadUnloadPrice = 50, DeliveryPrice = 100},
